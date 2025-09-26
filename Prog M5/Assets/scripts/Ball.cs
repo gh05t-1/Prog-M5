@@ -1,23 +1,19 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private float elapsedTime = 0f;
-    public GameObject prefab;
+    private float elapsedTime = 0f;  //field
+    public GameObject prefab; 
   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Start() // method
     {
         for (int i = 0; i < 100; i++)
         {
             Color color = RandomColor();
             Vector3 randPos = RandomPosition(-10f, 10f);
             CreateBall(color, randPos);
-        }
-
-        if (Input.GetKeyDown("space"))
-        {
-            Destroy(gameObject);
         }
     }
     private GameObject CreateBall(Color c, Vector3 pos)
@@ -47,8 +43,6 @@ public class Ball : MonoBehaviour
             DestroyBall(ball);
             elapsedTime = 0f;
         }
-
-
     }
 
     private Color RandomColor()
@@ -70,9 +64,6 @@ public class Ball : MonoBehaviour
  
     private void DestroyBall(GameObject ball)
     {
-        Debug.Log("destry ball");
-
         Destroy(ball, 3f);
-
     }
 }
