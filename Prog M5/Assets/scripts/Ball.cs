@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private float elapsedTime = 0f;  //field
-    public GameObject prefab; 
+    private float elapsedTime = 0f;  
+    public GameObject prefab; //variable or field
   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() // method
+    void Start() // method or function
     {
         for (int i = 0; i < 100; i++)
         {
