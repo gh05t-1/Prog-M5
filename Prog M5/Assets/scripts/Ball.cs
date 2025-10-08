@@ -38,7 +38,7 @@ public class Ball : MonoBehaviour
         if (elapsedTime > 1f)
         {
             Color color = RandomColor();
-            Vector3 randPos = RandomPosition(-10f, 10f);
+            Vector3 randPos = RandomPosition(-100f, 100f);
             GameObject ball = CreateBall(color, randPos);
             DestroyBall(ball);
             elapsedTime = 0f;
