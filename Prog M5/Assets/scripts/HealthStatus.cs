@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HealthStatus : MonoBehaviour
 {
-    private int health;
+    [SerializeField] private int health = 100;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,6 +12,11 @@ public class HealthStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Debug.Log("h pressed");
+            health -= 10;
+        }
         if (health >80)
         {
             Debug.Log("Excellent health!");
